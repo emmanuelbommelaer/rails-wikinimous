@@ -8,7 +8,7 @@
 
 10.times do
   title = Faker::Book.title
-  text = Faker::Lorem.words(number: 50)
-  article = Article.new(title: title, text: text)
+  text = Faker::Lorem.paragraph(sentence_count: 20)
+  article = Article.new(title: title, content: text)
   article.save
 end

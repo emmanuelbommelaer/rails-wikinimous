@@ -1,0 +1,8 @@
+<div class="mx-auto" style="max-width: 800px">
+  <div class="d-flex gap-3 align-items-end p-1 mb-3">
+    <h1 class="mb-0"><%= @article.title %></h1>
+    <%= link_to "Delete article", article_path(@article), class: "mb-1", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+    <%= link_to "Edit article", edit_article_path(@article), class: "mb-1" %>
+  </div>
+  <p><%= @article.content %></p>
+</div>
